@@ -11,16 +11,28 @@
   <div class="app-wrap">
     <header>
       <input type="text" autocomplete="off" class="search-box" placeholder="Search for a city..." />
+	  <div class="temp-dropdown">
+	  <select id="temp-select">
+		<option value="c">Celcius</option>
+		<option value="f">Fahrenheit</option>
+		<option value="k">Kelvin</option>
+	  </select>
+	  </div>
     </header>
     <main>
       <section class="location">
-        <div class="city">Northampton, GB</div>
-        <div class="date">Thursday 10 January 2020</div>
+        <div class="city">City, Country</div>
+		<div class="coord">Coordinates</div>
+        <div class="date">Date</div>
       </section>
       <div class="current">
-        <div class="temp">15<span>°c</span></div>
-        <div class="weather">Sunny</div>
-        <div class="hi-low">13°c / 16°c</div>
+        <div class="temp">Tempature</div>
+		<div class="feelslike"></div>
+        <div class="weather">Weather condition</div>
+		<div class="weatherdesc"></div>
+		<div class = "weatherIcon"><img id ="icon" src="https://openweathermap.org/img/wn/01d@2x.png"></div>
+        <div class="hi-low">Lows / Highs</div>
+		<div class="humidity">Humidity</div>
       </div>
     </main>
   </div>

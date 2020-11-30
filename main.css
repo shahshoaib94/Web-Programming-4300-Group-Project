@@ -54,6 +54,13 @@ main {
   text-align: center;
 }
 
+.location .coord {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
 .location .city {
   color: #FFF;
   font-size: 32px;
@@ -78,7 +85,7 @@ main {
   font-weight: 500;
 }
 
-.current .weather {
+.current .weather, .feelslike {
   color: #FFF;
   font-size: 32px;
   font-weight: 700;
@@ -87,10 +94,91 @@ main {
   text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
 }
 
-.current .hi-low {
+.current .weatherdesc {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  margin-bottom: 15px;
+  text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
+}
+
+.current .hi-low, .humidity {
   color: #FFF;
   font-size: 24px;
   font-weight: 500;
   text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
 }
 
+/* reset inherit values for select element*/
+select {
+  appearance: none; 
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  grid-area: select;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+/* global variables to match HTML root class. */
+:root {
+  --select-border: rgba(251, 76, 76, 0.8);
+  --select-focus: rgba(180, 100, 76, 1.0);
+  --select-arrow: var(--select-border);
+}
+
+/* dropdown menu for temperature selection */
+.temp-dropdown
+{
+  width: 20px;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.2;
+  /* BEGIN -- properties for arrow */
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  /* END -- properties for arrow */
+  background-color: rgba(201, 76, 76, 0.3);
+  background-image: linear-gradient(to top, rgba(201, 76, 76, 0.3));
+}
+
+/* style for dropdown menu options */
+.temp-dropdown option {
+    margin: 40px;
+    background: rgba(201, 76, 76, 0.3);
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* after pseudo class to create arrow for dropdown */
+.temp-dropdown::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--select-arrow);
+  grid-area: select;
+  justify-self: end;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+
+.tempdropdown::focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid var(--select-focus);
+  border-radius: inherit;
+}
