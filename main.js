@@ -5,6 +5,7 @@ const api = {
 
 var tempUnit = '°c';
 var tempSystem = 'metric';
+var windUnit = 'mph';
 
 const searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
@@ -60,7 +61,7 @@ function displayResults(weather) {
     humid.innerText = `Humidity: ${weather.main.humidity} %`;
 
     let wind = document.querySelector('.wind');
-    wind.innerText = `Wind: ${weather.wind.speed} mph ${weather.wind.deg}°`;
+    wind.innerText = `Wind: ${weather.wind.speed} ${windUnit} ${weather.wind.deg}°`;
 }
 
 function dateBuilder(d) {
@@ -81,14 +82,16 @@ function getTempSelect() {
     if (selectValue == "c") {
         tempUnit = '°c';
         tempSystem = 'metric';
+		windUnit = 'mph';
     } else if (selectValue == "f") {
         tempUnit = '°f';
         tempSystem = 'imperial';
+		windUnit = 'km/h';
     } else {
         tempUnit = 'K';
         tempSystem = 'standard';
+		windUnit = 'mph';
     }
+	
+
 }
-
-
-

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>what is your name</title>
+      <style type = "text/css">
+         div.background
+         {
+            background-image: url(jhey_files/logo.png), url(jhey_files/ocean.png);
+            background-position: bottom right, 100% center;
+            background-origin: border-box, content-box;
+            background-repeat: no-repeat, repeat;
+         }     
+         div.content
+         {
+            padding: 10px 15px;
+            color: white;
+            font-size: 150%;
+         }
+		 
+		 		/* Navigation bar background color */
+.navigator {
+  background-color: rgba(38, 48, 192, 0.7);
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+/* navigation bar links style */
+.navigator a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* hover navigation style*/
+.navigator a:hover {
+  background-color: rgba(38, 48, 222, 0.5);
+}
+
+/* Add a color to the active/current link */
+.navigator a.active {
+  background-color: rgba(38, 189, 222, 0.4);
+  color: white;
+}
+      </style>
+   </head>
+
+   <body>
+      			<div class="navigator">
+				<a href = "../index.html">Home</a>
+				<a href = "../description.html">Description</a>
+				<a class="active" href = "../about.html">About Us</a>
+				<a href = "../resources.html">Resources</a>
+			</div>
+   
+      <h1> HELLO </h1>
+      <h2> THIS IS MY </h2>
+      <h3> INTRODUCTION </h3>
+      <p>Hello my name jheysson</p>
+      <p><a href = "http://www.google.com">cool website</a></p>
+      <p><img src = "jhey_files/sadge.png">
+      <img src = "noimage.png" width = "92" height = "120"
+            alt = "sadge">
+      <p>Hello this is where my introduction will go. My name is Jheysson Menendez and I go to University of Houston Downtown.</p>
+      <p>My hobbies are playing video games and making YouTube videos about those video games. I also enjoy watching things on the internet like Twitch and YouTube.</p>
+      <p>My major in UHD is Computer Science and I am graduating next year, I am not sure what kind of job i will go for, but i hope for good things in the future.</p>
+      <p>I have created a few things during my time at UHD, such as a short 3D platformer video game, a arduino powered petting cat, and im currently learning about making websites.</p>
+
+      <ul>
+         <li> My name is jheysson menendez.</li>
+         <li> I like the green frog.</li>
+         <li><a href = "http://www.youtube.com">another cool website</a></li>
+      </ul>
+
+      <table border = "1">
+         <caption><strong> Interesting Table </strong></caption>
+
+         <thead>
+            <tr>
+               <th>Stuff</th>
+               <th>Price</th>
+            </tr>
+         </thead>
+
+         <tfoot>
+            <tr>
+               <th>Total</th>
+               <th>Too Much</th>
+            </tr>
+         </tfoot>
+
+         <tbody>
+            <tr>
+               <td>Apple Stand</td> 
+               <td>$1068</td>
+            </tr>
+            <tr>
+               <td>Samsung Zfold</td>
+               <td>$2000</td>
+            </tr>
+            <tr>
+               <td>Cybertruck</td>
+               <td>$39900</td>
+            </tr>
+            <tr>
+               <td>Minecraft</td>
+               <td>$27</td>
+            </tr>
+         </tbody>
+      </table>
+
+<h1>Programming Language Form</h1>
+      <p>Please fill out this form to inform us what programming language you use.</p>
+
+      <form method = "post" action = "http://www.deitel.com">
+
+         <input type = "hidden" name = "recipient"
+            value = "deitel@deitel.com">
+         <input type = "hidden" name = "subject" 
+            value = "Feedback Form">
+         <input type = "hidden" name = "redirect" 
+            value = "main.html"> 
+
+         <p><label>Name: 
+               <input name = "Your Name" type = "text" size = "25">
+            </label></p>
+ 
+         <!-- <textarea> creates a multiline textbox -->
+         <p><label>What programming languages do you use?:<br>
+            <textarea name = "What programming languages do you use?"
+               rows = "4" cols = "36">Enter information here.</textarea>
+         </label></p>
+
+         <!-- <input type = "password"> inserts a -->
+         <!-- textbox whose display is masked with -->
+         <!-- asterisk characters -->
+         <p><label>E-mail Address: 
+            <input name = "email" type = "password"  size = "25">
+         </label></p>              
+
+         <p>
+            <strong>Programming languages you don't like:</strong><br>
+
+            <label>Java
+               <input name = "thingsliked" type = "checkbox" 
+                  value = "Java"></label>
+            <label>C++
+               <input name = "thingsliked" type = "checkbox" 
+                  value = "C++"></label>
+            <label>C#
+               <input name = "thingsliked" type = "checkbox" 
+                  value = "C#"></label> 
+            <label>Python
+               <input name = "thingsliked" type = "checkbox" 
+                  value = "Python"></label>
+            <label>Matlab
+               <input name = "thingsliked" type = "checkbox" 
+                  value = "Matlab"></label>
+         </p>
+
+         <!-- <input type = "radio"> creates a radio -->
+         <!-- button. The difference between radio buttons -->
+         <!-- and checkboxes is that only one radio button -->
+         <!-- in a group can be selected. -->
+         <p>
+            <strong>Which is your best programming language:</strong><br>
+
+            <label>C++
+               <input name = "howtosite" type = "radio"
+                  value = "c++" checked></label>
+            <label>Java
+               <input name = "howtosite" type = "radio" 
+                  value = "java"></label> 
+            <label>HTML
+               <input name = "howtosite" type = "radio" 
+                  value = "html"></label>
+            <label>Python
+               <input name = "howtosite" type = "radio" 
+                  value = "python"></label>
+            <label>Matlab
+               <input name = "howtosite" type = "radio" 
+                  value = "matlab"></label>
+         </p>
+
+         <p>
+            <label>Rate your programming skills of your best programming laguage: 
+
+                <!-- the <select> tag presents a drop-down -->
+                <!-- list with choices indicated by the -->
+                <!-- <option> tags -->
+               <select name = "rating">
+                  <option selected>Amazing</option>
+                  <option>10</option>
+                  <option>9</option>
+                  <option>8</option>
+                  <option>7</option>
+                  <option>6</option>
+                  <option>5</option>
+                  <option>4</option>
+                  <option>3</option>
+                  <option>2</option>
+                  <option>1</option>
+                  <option>Awful</option>
+               </select>
+            </label>
+         </p>
+
+         <p>
+            <input type = "submit" value = "Submit">
+            <input type = "reset" value = "Clear">
+         </p>   
+      </form>
+
+      <p style = "font-size: 20pt; color: deepskyblue;">
+         Wow look at these colors</p>
+      <p style = "font-size: 20pt; color: blue;">
+         Wow look at these colors</p>
+      <p style = "font-size: 20pt; color: green;">
+         Wow look at these colors</p>
+
+      <div class = "background">
+      <div class = "content">
+      	<p> INTERESTING IMAGES RIGHT?
+      </div></div>
+   </body>
+</html>
