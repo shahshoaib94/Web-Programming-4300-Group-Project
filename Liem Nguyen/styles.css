@@ -1,0 +1,25 @@
+
+body     {background-image: url("img1.jpg");background-size: cover; font-family: Arial, helvetica;width: 1000px;color: green;}
+a.nodec  { text-decoration: none; }
+a:hover  { text-decoration: underline; }
+li em    { font-weight: bold; }
+h1, em   { font-family: Blackadder ITC, helvetica, sans-serif; color: green;}
+ul       { margin-left: 20px; }
+ul ul    { font-size: .8em; }
+div {background-color: orange;
+     width:300px;
+     border:15px solid purple;
+     padding: 40px;
+     margin: 100px; 
+     animation-name: welcome;
+     animation-duration:3s;}
+
+         
+@keyframes welcome
+{ from
+      { margin-left: 100%;
+        width:300%;}
+  to
+      { margin-left: 0%;
+        width:100%;}
+         
