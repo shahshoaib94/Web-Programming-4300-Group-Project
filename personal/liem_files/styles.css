@@ -1,0 +1,52 @@
+
+body     {background-image: url("img1.jpg");background-size: cover; font-family: Arial, helvetica;width: 1000px;color: green;}
+a.nodec  { text-decoration: none; }
+a:hover  { text-decoration: underline; }
+li em    { font-weight: bold; }
+h1, em   { font-family: Blackadder ITC, helvetica, sans-serif; color: green;}
+ul       { margin-left: 20px; }
+ul ul    { font-size: .8em; }
+div {background-color: orange;
+     width:300px;
+     border:15px solid purple;
+     padding: 40px;
+     margin: 100px; 
+     animation-name: welcome;
+     animation-duration:3s;}
+
+         
+@keyframes welcome
+{ from
+      { margin-left: 100%;
+        width:300%;}
+  to
+      { margin-left: 0%;
+        width:100%;}
+         
+		/* Navigation bar background color */
+.navigator {
+  background-color: rgba(38, 48, 192, 0.7);
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+/* navigation bar links style */
+.navigator a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* hover navigation style*/
+.navigator a:hover {
+  background-color: rgba(38, 48, 222, 0.5);
+}
+
+/* Add a color to the active/current link */
+.navigator a.active {
+  background-color: rgba(38, 189, 222, 0.4);
+  color: white;
+}
