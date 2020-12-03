@@ -6,7 +6,7 @@
 
 body {
     font-family: 'monterrat', sans-serif;
-    background-image: url('bg.jpg');
+    background-image: url('images/background/bg.png');
     background-size: cover;
     background-position: top center;
 }
@@ -19,9 +19,10 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  text-align: center;
   align-items: center;
+  height: 10vh;
   padding: 50px 15px 15px;
 }
 
@@ -31,10 +32,9 @@ header input {
   padding: 10px 15px;
   border: none;
   outline: none;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(222, 222, 255, 0.8);
   border-radius: 16px 0px 16px 0px;
-  border-bottom: 3px solid #DF8E00;
-  
+  border-bottom: 3px solid rgba(255, 255, 255, 0.9);
   color: #313131;
   font-size: 20px;
   font-weight: 300;
@@ -45,6 +45,34 @@ header input:focus {
   background-color: rgba(255, 255, 255, 0.6);
 }
 
+/* Navigation bar background color */
+.navigator {
+  background-color: rgba(38, 48, 192, 0.7);
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+/* navigation bar links style */
+.navigator a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* hover navigation style*/
+.navigator a:hover {
+  background-color: rgba(38, 48, 222, 0.5);
+}
+
+/* Add a color to the active/current link */
+.navigator a.active {
+  background-color: rgba(38, 189, 222, 0.4);
+  color: white;
+}
+
 main {
   flex: 1 1 100%;
   padding: 25px 25px 50px;
@@ -52,6 +80,46 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.aboutbody {
+	text-align: left;
+	border: 2px solid black;
+	background-color: rgba(4, 3, 2, 0.55);
+	color: white;
+	width: 650px;
+	height: 100 % ;
+	padding: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:0;
+	margin-top:0;
+}
+
+.aboutlink {
+  background-color: rgba(38, 189, 222, 0.4);
+  overflow: hidden;
+  
+}
+
+.aboutlink a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.location {
+	border: 2px solid black;
+	background-color: rgba(4, 3, 2, 0.25);
+	width: 650px;
+	height: 100 % ;
+	padding: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom:0;
 }
 
 .location .coord {
@@ -71,6 +139,17 @@ main {
 .location .date {
   color: #FFF;
   font-size: 16px;
+}
+
+.current {
+	border: 2px solid black;
+	background-color: rgba(4, 3, 2, 0.35);
+	width: 650px;
+	height: 100 % ;
+	padding: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:15px;
 }
 
 .current .temp {
@@ -103,7 +182,7 @@ main {
   text-shadow: 0px 3px rgba(0, 0, 0, 0.4);
 }
 
-.current .hi-low, .humidity {
+.current .hi-low, .humidity, .wind {
   color: #FFF;
   font-size: 24px;
   font-weight: 500;
@@ -128,14 +207,15 @@ select {
 
 /* global variables to match HTML root class. */
 :root {
-  --select-border: rgba(251, 76, 76, 0.8);
-  --select-focus: rgba(180, 100, 76, 1.0);
+  --select-border: rgba(38, 48, 192, 0.7);
+  --select-focus: rgba(38, 48, 222, 0.5);
   --select-arrow: var(--select-border);
 }
 
 /* dropdown menu for temperature selection */
 .temp-dropdown
 {
+  margin-bottom:15px;
   width: 20px;
   min-width: 15ch;
   max-width: 30ch;
@@ -150,20 +230,20 @@ select {
   grid-template-areas: "select";
   align-items: center;
   /* END -- properties for arrow */
-  background-color: rgba(201, 76, 76, 0.3);
-  background-image: linear-gradient(to top, rgba(201, 76, 76, 0.3));
+  background-color: rgba(180, 180, 222, 0.5);
+  background-image: linear-gradient(to top, rgba(38, 48, 222, 0.5));
 }
 
 /* style for dropdown menu options */
 .temp-dropdown option {
     margin: 40px;
-    background: rgba(201, 76, 76, 0.3);
+    background: rgba(38, 48, 222, 0.5);
     color: #fff;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
 /* after pseudo class to create arrow for dropdown */
-.temp-dropdown::after {
+.temp-dropdown::before {
   content: "";
   width: 0.8em;
   height: 0.5em;
